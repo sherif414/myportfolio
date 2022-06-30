@@ -41,9 +41,9 @@
         <p class="w-55ch ">
             / **
             <br>
-            * although I do like to focus one thing and hone my skills
+            * although I do like to focus on one thing and hone my skills
             <br>
-            * on it knowing its ins and outs, I do experiment with new
+            * in it, knowing its ins and outs, I do experiment with new
             <br>
             * tools and libraries every now and then, picking them along
             <br>
@@ -55,9 +55,9 @@
             <br>
             * the things I'm focusing on right now
             <br>
-            * django is my little sidekick project and my entrance into
+            * django is my little sidekick project and my entrance
             <br>
-            * the world of backend development.
+            * to backend development.
             <br>
             * /
         </p>

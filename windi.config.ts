@@ -5,11 +5,13 @@ export default defineConfig({
     "nav-link": "text-center pt-2 h-full hover:(text-secondary-4)",
     "nav-link-active": "text-secondary-4 border-b border-b-hovered border-b-2px",
     highlight: "hover:text-secondary-4 cursor-pointer",
+    'contact-form': 'bg-primary-2 border w-full rounded px-2 py-1 outline-none focus:border-focus',
   },
   theme: {
     borderColor: {
       DEFAULT: "#1E2D3D",
       hovered: "#FEA55F",
+      focus: '#607B96',
     },
     colors: {
       "primary-1": "#01080E",

@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const useStore = defineStore('main', () => {
-    const currSheet = ref<String>()
+    const currSheet = ref('personal')
     const openFolders = ref({
         bio: false,
         education: false,
