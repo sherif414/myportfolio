@@ -22,25 +22,10 @@ const props = defineProps<{
   title: string,
   color?: string
 }>();
+
 const handleClick = () => {
   isOpen.value = !isOpen.value
-  if (isOpen.value) {
-    if (props.title === 'bio') {
-      store.openFolders.bio = true
-    } else if (props.title === 'education') {
-      store.openFolders.education = true
-    } else if (props.title === 'interests') {
-      store.openFolders.interests = true
-    }
-  } else {
-    if (props.title === 'bio') {
-      store.openFolders.bio = false
-    } else if (props.title === 'education') {
-      store.openFolders.education = false
-    } else if (props.title === 'interests') {
-      store.openFolders.interests = false
-    }
-  }
+  store.openFolders.set(props.title, isOpen.value)
 
 
 }

@@ -39,6 +39,9 @@
         </div>
     </div>
     <div v-if="rickyrolled">
+        <div>
+
+        </div>
         <button class="bg-secondary-3 py-1 px-4 rounded-lg text-secondary-4"
             @click="rickyrolled = false">unroll</button>
     </div>

@@ -2,9 +2,9 @@
   <main class="grid grid-cols-12">
     <div class="col-span-2 border-r grid grid-cols-[2.5rem,1fr]">
       <div class="border-r flex flex-col items-center pt-6 gap-4">
-        <i :class="['i ri:terminal-box-line', { 'text-accent-1': store.openFolders.bio }]" /><i
-          :class="['i ri:book-mark-line', { 'text-accent-2': store.openFolders.education }]" /><i
-          :class="['i ri:gamepad-line', { 'text-accent-4': store.openFolders.interests }]" />
+        <i :class="['i ri:terminal-box-line', { 'text-accent-1': store.openFolders.get('bio') }]" /><i
+          :class="['i ri:book-mark-line', { 'text-accent-2': store.openFolders.get('education') }]" /><i
+          :class="['i ri:gamepad-line', { 'text-accent-4': store.openFolders.get('interests') }]" />
       </div>
       <DropDown />
     </div>

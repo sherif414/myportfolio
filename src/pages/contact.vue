@@ -1,10 +1,13 @@
 <template>
     <main class="grid grid-cols-12">
         <section class="col-span-2 border-r text-sm">
-            <div class="p-1 pl-4 border-b mb-4">contacts</div>
-            <div class="flex pl-2 items-center"><i class="i ri:mail-fill mr-2" /> creazyhell@gmail.com</div>
-            <div class="flex pl-2 items-center"><i class="i ri:phone-fill mr-2" /> 0117446242</div>
-            <div class="flex pl-2 items-center"><i class="i ri:phone-fill mr-2" /> 0997153238</div>
+            <div class="p-1 text-secondary-4 pl-4 border-b mb-4"><i class="mr-2 i ri:arrow-down-s-fill" />contacts</div>
+            <div class="flex pl-2 items-center"><i class="i ri:mail-fill mx-2" /> creazyhell@gmail.com</div>
+            <div class="flex pl-2 items-center"><i class="i ri:phone-fill mx-2" /> 0117446242</div>
+            <div class="flex pl-2 items-center"><i class="i ri:phone-fill mx-2" /> 0997153238</div>
+            <div class="p-1 text-secondary-4 pl-4 border-b my-4 border-t"><i
+                    class="mr-2 i ri:arrow-down-s-fill" />loaction</div>
+            <div class="flex pl-2 items-center"><i class="i ri:map-line mx-2" />khartoum - sudan</div>
         </section>
         <section class="col-span-5 border-r flex flex-col justify-center items-center px-[15%]">
             <form v-if="showForm" class="flex flex-col w-full gap-4">
