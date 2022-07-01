@@ -9,20 +9,20 @@
       <router-link class="border-l nav-link col-start-12" to="/contact">_contact-me
       </router-link>
     </header>
-    <TransitionPage>
-      <router-view />
-    </TransitionPage>
+    <router-view>
+    </router-view>
     <footer class="border-t flex items-center text-sm">
       <div class="border-r p-2 h-full">find me at:</div>
-      <a class="border-r nav-link p-2" href="#"><i class="i ri:facebook-fill"></i></a>
-      <a class="border-r nav-link p-2" href="#"><i class="i ri:twitter-fill"></i></a>
-      <a class="border-r nav-link p-2" href="#"><i class="i ri:github-fill"></i></a>
+      <a class="border-r nav-link p-2" target="_blank" href="https://www.fb.com"><i class="i ri:facebook-fill"></i></a>
+      <a class="border-r nav-link p-2" target="_blank" href="https://www.twitter.com"><i
+          class="i ri:twitter-fill"></i></a>
+      <a class="border-r nav-link p-2" target="_blank" href="https://www.github.com"><i
+          class="i ri:github-fill"></i></a>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-import TransitionPage from './components/transitions/TransitionPage.vue';
 </script>
 
 <style>

@@ -24,13 +24,13 @@
                     <textarea v-model="dataBody" class="contact-form" name="" id="" rows="6"></textarea>
                 </div>
                 <button @click.prevent="submitForm"
-                    class="bg-lines text-secondary-4 px-2 py-1 w-max rounded">submit</button>
+                    class="bg-secondary-3 text-secondary-4 px-2 py-1 w-max rounded">submit</button>
             </form>
             <div v-if="!showForm" class="text-center">
                 <div class="text-secondary-4">all good !</div>
-                <div>thanks for reaching out to me</div>
+                <div>thanks for reaching out</div>
                 <div>I'll replay as soon as possible</div>
-                <button @click="handleresend" class="bg-lines text-secondary-4 rounded mt-4 px-2 py-1">send
+                <button @click="handleresend" class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1">send
                     another?</button>
             </div>
         </section>

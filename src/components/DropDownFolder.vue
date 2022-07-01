@@ -26,7 +26,5 @@ const props = defineProps<{
 const handleClick = () => {
   isOpen.value = !isOpen.value
   store.openFolders.set(props.title, isOpen.value)
-
-
 }
 </script>
