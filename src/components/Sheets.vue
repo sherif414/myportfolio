@@ -23,15 +23,11 @@
             <br>
             * into creating all sort of projects that satisfies my urge
             <br>
-            * as creator.
+            * as a creator.
             <br>
             * aside from coding I play lots of games specially real-time
             <br>
             * strategy titles like age of empires and civilizatons.
-            <br>
-            * after a long marathon of coding all day nothing beats
-            <br>
-            * a good ol' manga with some snacks on the side
             <br>
             * /
         </p>
@@ -43,11 +39,11 @@
             <br>
             * although I do like to focus on one thing and hone my skills
             <br>
-            * in it, knowing its ins and outs, I do experiment with new
+            * on it, knowing its ins and outs, I do experiment with new
             <br>
-            * tools and libraries every now and then, picking them along
+            * tools and libraries every now and then, picking them up along
             <br>
-            * the way so i can keep myself updated and further expand
+            * the way so I can keep myself updated and further expand
             <br>
             * my knowledge.
             <br>
@@ -55,7 +51,7 @@
             <br>
             * the things I'm focusing on right now
             <br>
-            * django is my little sidekick project and my entrance
+            * django is my little side-kick project and my entrance
             <br>
             * to backend development.
             <br>
@@ -67,15 +63,15 @@
         <p class="w-55ch ">
             / **
             <br>
-            * there is nothing much to say about my education journey
+            * there isn't really much to say about my education journey
             <br>
-            * it was pretty ordinary, i maintained good grades through
+            * it was some what ordinary, i maintained good grades through
             <br>
-            * mid schools graduating with a score of 266/280 , highschool
+            * mid school graduating with a score of 266/280
             <br>
-            * was a bit rough at first but managed to keep up and graduated
+            * highschool was a bit rough at first but I managed to keep up and
             <br>
-            * with a score 87.3% and here I'm a collage student majoring
+            * graduated with a 87.3% and here I'm a collage student studying
             <br>
             * software engineering at sudan university.
             <br>
@@ -83,7 +79,7 @@
             <br>
             * and I prefered self-learning through youtube, books or the
             <br>
-            * amaizing people i was lucky to meet through out my life.
+            * people I met through out my life.
             <br>
             * /
         </p>
@@ -92,23 +88,23 @@
         <p class="w-55ch ">
             / **
             <br>
-            * there is nothing much to say about my education journey
+            * youtube is my go to place when ever i'm learning
             <br>
-            * it was pretty ordinary, i maintained good grades through
+            * something new, channels like programming with mosh taught
             <br>
-            * mid schools graduating with a score of 266/280 , highschool
+            * me alot and i'm forever grateful to them
             <br>
-            * was a bit rough at first but managed to keep up and graduated
+            * another option is the offical docs of the tool i'm trying
             <br>
-            * with a score 87.3% and here I'm a collage student majoring
+            * to learn which sometimes can be a life saver.
             <br>
-            * software engineering at sudan university.
+            * generally speaking, any source of information would be
             <br>
-            * but if I'm to be honest formal education wasn't really my thing
+            * ok, whats more important is the desire to learn
             <br>
-            * and I prefered self-learning through youtube, books or the
+            * and some good time management skills then anyone can
             <br>
-            * amaizing people i was lucky to meet through out my life.
+            * learn anything.
             <br>
             * /
         </p>
@@ -117,7 +113,17 @@
         <p class="w-55ch ">
             / **
             <br>
-            *
+            * one word. "league of legends" - actually those are 3
+            <br>
+            * but you don't need to know math to become a programmer -
+            <br>
+            * its definatly the game i loved and hated the most i spent
+            <br>
+            * most of my free time playing it and when ever i felt stressed
+            <br>
+            * out by life it was my escape, and then i'd realize it was a dump
+            <br>
+            * idea cuz it made me even more stressed but hey it was "fun".
             <br>
             *
             <br>
@@ -131,30 +137,30 @@
             <br>
             *
             <br>
-            *
+            * "nerf fiora plz"
             <br>
             * /
         </p>
     </div>
-    <div v-if="store.currSheet === 'free time'" class="w-full grid justify-items-center pt-6">
+    <div v-if="store.currSheet === 'manga'" class="w-full grid justify-items-center pt-6">
         <p class="w-55ch ">
             / **
             <br>
-            *
+            * i like manga blah blah blah..
+            <br>
+            * since I can post what ever BS I want on this
+            <br>
+            * website, ama just slide some manga recommendations here
             <br>
             *
             <br>
-            *
+            * > grand blue - THE most hilarious shit I've ever read.
             <br>
-            *
+            * > good night punpun - this gave some serious goosebumps.
             <br>
-            *
+            * > tower of god - CHARACTER DEVELOPMENT don't sleep on
             <br>
-            *
-            <br>
-            *
-            <br>
-            *
+            * this gem.
             <br>
             * /
         </p>

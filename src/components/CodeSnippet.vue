@@ -10,9 +10,9 @@
             </div>
         </div>
         <div class="bg-primary-3 mt-4 text-sm border rounded-lg p-4">
-            <i class="text-accent-1">fun</i> <i class="text-secondary-3">startOperation</i> (<i
-                class="text-accent-2">codeName</i>: String, <i class="text-accent-2">target</i>:
-            targetOptions) {
+            <i class="text-accent-1">function</i> <i class="text-secondary-3">startOperation</i> (<i
+                class="text-accent-2">codeName</i>: string, <i class="text-accent-2">target</i>:
+            targetOptions): void {
             <br>
             <i class="text-accent-1 ml-4">try </i>{
             <br>
@@ -20,17 +20,17 @@
             <br>
             <span class="ml-4">}</span>
             <br>
-            <i class="text-accent-1 ml-4">catch</i> {
+            <i class="text-accent-1 ml-4">catch</i>(e) {
             <br>
-            <span class="ml-8 text-accent-1">throw</span> "operation <i class="text-secondary-2">$codeName</i>
-            unsuccessful !"
+            <span class="ml-8 text-accent-1">throw</span> `operation <i class="text-secondary-2">${codeName}</i>
+            unsuccessful !`
             <br>
             <span class="ml-4">}</span>
             <br>
             }
             <br>
-            <i class="text-secondary-3">startOperation</i>(codeName = <i class="text-secondary-2">'kill Da hoes'</i>,
-            target = <i class="text-secondary-2">'kizan'</i>)
+            <i class="text-secondary-3">startOperation</i>(<i class="text-secondary-2">"kill Da hoes"</i>,
+            <i class="text-secondary-2">"kizan"</i>)
         </div>
         <div class="flex justify-end mt-2">
             <button @click="rickyrolled = true" class="bg-secondary-3 py-1 px-4 rounded-lg text-secondary-4">

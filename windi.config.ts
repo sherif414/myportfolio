@@ -2,7 +2,7 @@ import { defineConfig } from "windicss/helpers";
 
 export default defineConfig({
   shortcuts: {
-    "nav-link": "text-center pt-2 h-full hover:(text-secondary-4)",
+    "nav-link": "text-center h-full items-center grid hover:(text-secondary-4)",
     "nav-link-active": "text-secondary-4 border-b border-b-hovered border-b-2px",
     highlight: "hover:text-secondary-4 cursor-pointer",
     'contact-form': 'bg-primary-2 border w-full rounded px-2 py-1 outline-none focus:border-focus',

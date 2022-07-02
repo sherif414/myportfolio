@@ -20,6 +20,6 @@ import DropDownFolder from './DropDownFolder.vue';
 const folders = [
   { title: "bio", files: ["personal", "skills"], color: "text-accent-1" },
   { title: "education", files: ["formal", "non-formal"], color: "text-accent-2" },
-  { title: "interests", files: ["gaming", "free time"], color: "text-accent-4" },
+  { title: "interests", files: ["gaming", "manga"], color: "text-accent-4" },
 ];
 </script>

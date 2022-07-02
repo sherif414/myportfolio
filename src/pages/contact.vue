@@ -39,7 +39,7 @@
             <div class="w-50ch text-secondary-3 mt-24 break-words">
                 1
                 <span class="mr-6" /> <span class="text-accent-4">const</span> button = document.querySelector(<span
-                    class="text-accent-1">'#sumbit-btn'</span>);
+                    class="text-accent-1">'#submit-btn'</span>);
                 <br>
                 2
                 <span class="mr-6" />
