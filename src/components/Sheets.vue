@@ -117,11 +117,11 @@
             <br>
             * but you don't need to know math to become a programmer -
             <br>
-            * its definatly the game i loved and hated the most i spent
+            * its definatly the game i loved and hated the most & i spent
             <br>
             * most of my free time playing it and when ever i felt stressed
             <br>
-            * out by life it was my escape, and then i'd realize it was a dump
+            * out by life it was my escape, then i'd realize it was a dump
             <br>
             * idea cuz it made me even more stressed but hey it was "fun".
             <br>
@@ -137,7 +137,7 @@
             <br>
             *
             <br>
-            * "nerf fiora plz"
+            * nerf fiora plz
             <br>
             * /
         </p>

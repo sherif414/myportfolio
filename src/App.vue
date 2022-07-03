@@ -11,17 +11,18 @@
     </header>
 
     <router-view v-slot="{ Component }">
-      <transition>
+      <Transition mode="out-in" name="fade">
         <component :is="Component" />
-      </transition>
+      </Transition>
     </router-view>
 
     <footer class="border-t flex items-center text-sm">
       <div class="border-r p-2 h-full">find me at:</div>
-      <a class="border-r nav-link p-2" target="_blank" href="https://www.fb.com"><i class="i ri:facebook-fill"></i></a>
-      <a class="border-r nav-link p-2" target="_blank" href="https://www.twitter.com"><i
+      <a class="border-r nav-link p-2" target="_blank" href="https://www.facebook.com/profile.php?id=100008278502164"><i
+          class="i ri:facebook-fill"></i></a>
+      <a class="border-r nav-link p-2" target="_blank" href="https://twitter.com/psycho___"><i
           class="i ri:twitter-fill"></i></a>
-      <a class="border-r nav-link p-2" target="_blank" href="https://www.github.com"><i
+      <a class="border-r nav-link p-2" target="_blank" href="https://github.com/sherif414"><i
           class="i ri:github-fill"></i></a>
     </footer>
   </div>
@@ -33,10 +34,18 @@
 </script>
 
 <style>
-@import "./assets/styles/ri.css";
-
 body {
-  font-family: "Fira Code" monospace;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: theme("colors.primary-2");
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .2s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -2,7 +2,7 @@
     <div v-if="!rickyrolled" class="my-8 w-full">
         <div class="flex justify-between">
             <div class="flex">
-                <img src="../assets/pic.jpg" class="rounded-[50%] w-8 h-8" alt="profile pic">
+                <img src="../assets/kachan.jpg" class="rounded-[50%] w-8 h-8" alt="profile pic">
                 <div class="text-xs ml-2">
                     <div class="text-secondary-3">@sherif414</div>
                     <div>Created 5 months ago</div>
@@ -39,11 +39,10 @@
         </div>
     </div>
     <div v-if="rickyrolled">
-        <div>
-
+        <div class="grid place-items-center">
+            <img class="mt-12" src="../assets/rickyroll.gif" alt="">
         </div>
-        <button class="bg-secondary-3 py-1 px-4 rounded-lg text-secondary-4"
-            @click="rickyrolled = false">unroll</button>
+
     </div>
 </template>
 

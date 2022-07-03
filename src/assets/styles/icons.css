@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "Remix Icon";
+    src: url("./ri.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.i {
+    font-family: "Remix Icon" !important;
+    font-size: 1em;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.i.ri\:facebook-fill:before {
+    content: "\e2bc";
+}
+
+.i.ri\:twitter-fill:before {
+    content: "\e83a";
+}
+
+.i.ri\:github-fill:before {
+    content: "\e3ca";
+}
+
+.i.ri\:arrow-down-s-fill:before {
+    content: "\e04d";
+}
+
+.i.ri\:arrow-right-s-fill:before {
+    content: "\e06d";
+}
+
+.i.ri\:book-mark-line:before {
+    content: "\e0d9";
+}
+
+.i.ri\:gamepad-line:before {
+    content: "\e3ab";
+}
+
+.i.ri\:terminal-box-line:before {
+    content: "\e7f6";
+}
+
+.i.ri\:folder-fill:before {
+    content: "\e361";
+}
+
+.i.ri\:file-user-fill:before {
+    content: "\e316";
+}
+
+.i.ri\:mail-fill:before {
+    content: "\e4f3";
+}
+
+.i.ri\:phone-fill:before {
+    content: "\e5e9";
+}
+
+.i.ri\:map-pin-user-fill:before {
+    content: "\e519";
+}

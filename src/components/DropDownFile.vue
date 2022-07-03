@@ -7,7 +7,11 @@
 import { useStore } from '../store/mainStore';
 import { computed } from '@vue/reactivity';
 const props = defineProps({
-  title: String,
+  title: {
+    type: String,
+    required: true
+  },
+
 });
 const store = useStore();
 const classes = computed(() => ({ "text-secondary-4": store.currSheet === props.title }));
