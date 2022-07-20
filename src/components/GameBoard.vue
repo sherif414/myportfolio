@@ -1,7 +1,23 @@
 <template>
   <div class="game-board">
     <div id="game" class="bg-[#011627] rounded-lg"></div>
-    <div class=""></div>
+    <div class="p-4">
+      <div class="text-secondary-4 text-sm grid items-center p-2 bg-[rgba(1,20,35,0.19)] mb-4">
+        <div class="mb-2">
+          //use keyboard <br />
+          //arrows to play
+        </div>
+        <div class="flex justify-center">
+          <i class="i ri:arrow-down-s-fill bg-[#010C15] rotate-180 transform py-[5px] px-4 rounded-lg" />
+        </div>
+        <div class="flex items-center justify-center">
+          <i class="i ri:arrow-down-s-fill bg-[#010C15] rotate-90 transform py-4 px-2 rounded-lg" />
+          <i class="i ri:arrow-down-s-fill bg-[#010C15] mx-4 rotate-180 transform py-[5px] px-4 rounded-lg" />
+          <i class="i ri:arrow-down-s-fill bg-[#010C15] rotate-270 transform py-4 px-2 rounded-lg" />
+        </div>
+      </div>
+      <div class="text-secondary-4">//food left</div>
+    </div>
   </div>
   <div class="grid fixed overflow-hidden w-50vw h-100vh">
     <svg viewBox="0 0 1114 1030" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,15 +85,14 @@
   }
   #game {
     display: grid;
-    grid-template-rows: repeat(21, 1fr);
-    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(37, 1fr);
+    grid-template-columns: repeat(22, 1fr);
   }
   .food {
-    background-color: hsl(50, 100%, 50%);
-    border: 0.25vmin solid black;
+    background-color: #fea55f;
+    border-radius: 50%;
   }
   .snake {
-    background-color: hsl(200, 100%, 50%);
-    border: 0.25vmin solid black;
+    background-color: #43d9ad;
   }
 </style>
