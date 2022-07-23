@@ -1,7 +1,7 @@
 <template>
-  <div class="game-board">
-    <div id="game" class="bg-[#011627] rounded-lg"></div>
-    <div class="p-4">
+  <div ref="el" class="game-board">
+    <Game />
+    <div class="pl-2">
       <div class="text-secondary-4 text-sm grid items-center p-2 bg-[rgba(1,20,35,0.19)] mb-4">
         <div class="mb-2">
           //use keyboard <br />
@@ -66,7 +66,7 @@
 </template>
 
 <script setup lang="ts">
-  //import "../game/game.js";
+  import Game from "./Game.vue";
 </script>
 
 <style>
@@ -82,17 +82,5 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
-  }
-  #game {
-    display: grid;
-    grid-template-rows: repeat(37, 1fr);
-    grid-template-columns: repeat(22, 1fr);
-  }
-  .food {
-    background-color: #fea55f;
-    border-radius: 50%;
-  }
-  .snake {
-    background-color: #43d9ad;
   }
 </style>

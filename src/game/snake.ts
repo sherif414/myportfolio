@@ -1,58 +1,64 @@
-import { getInputDirection } from "./input.js";
+class Snake {
+  private _body: Point[] = [{ x: 10, y: 10 }];
+  private GRID_ROWS: number;
+  private GRID_COLS: number;
 
-export const SNAKE_SPEED = 5;
-const snakeBody = [{ x: 11, y: 11 }];
-let newSegments = 0;
-
-export function update() {
-  addSegments();
-
-  const inputDirection = getInputDirection();
-  for (let i = snakeBody.length - 2; i >= 0; i--) {
-    snakeBody[i + 1] = { ...snakeBody[i] };
+  constructor(gridDimensions: { GRID_ROWS: number; GRID_COLS: number }) {
+    this.GRID_COLS = gridDimensions.GRID_COLS;
+    this.GRID_ROWS = gridDimensions.GRID_ROWS;
   }
 
-  snakeBody[0].x += inputDirection.x;
-  snakeBody[0].y += inputDirection.y;
-}
-
-export function draw(gameBoard: HTMLElement) {
-  snakeBody.forEach((segment) => {
-    const snakeElement = document.createElement("div");
-    snakeElement.style.gridRowStart = segment.y.toString();
-    snakeElement.style.gridColumnStart = segment.x.toString();
-    snakeElement.classList.add("snake");
-    gameBoard.appendChild(snakeElement);
-  });
-}
-
-export function expandSnake(amount: number) {
-  newSegments += amount;
-}
-
-export function onSnake(position: Point, { ignoreHead = false } = {}) {
-  return snakeBody.some((segment, index) => {
-    if (ignoreHead && index === 0) return false;
-    return equalPositions(segment, position);
-  });
-}
-
-export function getSnakeHead() {
-  return snakeBody[0];
-}
-
-export function snakeIntersection() {
-  return onSnake(snakeBody[0], { ignoreHead: true });
-}
-
-function equalPositions(pos1: Point, pos2: Point) {
-  return pos1.x === pos2.x && pos1.y === pos2.y;
-}
-
-function addSegments() {
-  for (let i = 0; i < newSegments; i++) {
-    snakeBody.push({ ...snakeBody[snakeBody.length - 1] });
+  public get body(): Point[] {
+    return this._body;
+  }
+  public set body(value: Point[]) {
+    this._body = value;
   }
 
-  newSegments = 0;
+  public consumedFood(point: Point, { ignoreHead = false } = {}): boolean {
+    return this.body.some((segment, index) => {
+      if (ignoreHead && index === 0) return false;
+      return point.x === segment.x && point.y === segment.y;
+    });
+  }
+
+  public update(newSegments: number, input: Point): void {
+    for (let i = 0; i < newSegments; i++) {
+      this.body.push({ ...this.body[this.body.length - 1] });
+    }
+    for (let i = this.body.length - 2; i >= 0; i--) {
+      this.body[i + 1] = { ...this.body[i] };
+    }
+
+    this.body[0].x += input.x;
+    this.body[0].y += input.y;
+  }
+
+  public checkDeath(): boolean {
+    const head = this.body[0];
+    return (
+      head.x < 1 ||
+      head.x > this.GRID_COLS ||
+      head.y < 1 ||
+      head.y > this.GRID_ROWS ||
+      this.consumedFood(this.body[0], { ignoreHead: true })
+    );
+  }
+
+  public draw(board: HTMLElement): void {
+    this.body.forEach((segment) => {
+      const el = document.createElement("div");
+      el.style.gridRowStart = segment.y.toString();
+      el.style.gridColumnStart = segment.x.toString();
+      el.classList.add("snake");
+      board.appendChild(el);
+    });
+  }
 }
+
+type Point = {
+  x: number;
+  y: number;
+};
+
+export default Snake;
