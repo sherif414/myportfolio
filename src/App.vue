@@ -5,7 +5,7 @@
       <router-link class="border-r nav-link" to="/">_index </router-link>
       <router-link class="border-r nav-link" to="/about">_about-me</router-link>
       <router-link class="border-r nav-link" to="/projects">_projects</router-link>
-      <router-link class="border-l nav-link col-start-12" to="/contact">_contact-me </router-link>
+      <router-link class="border-r nav-link" to="/contact">_contact-me </router-link>
     </header>
 
     <router-view v-slot="{ Component }">
@@ -36,7 +36,7 @@
 
 <style>
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
   body {
     font-family: "Fira Code", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
