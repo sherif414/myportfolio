@@ -16,7 +16,7 @@
           <i class="i ri:arrow-down-s-fill bg-[#010C15] rotate-270 transform py-4 px-2 rounded-lg" />
         </div>
       </div>
-      <div class="text-secondary-4">//food left</div>
+      <div class="text-secondary-4">//score : {{ store.score }}</div>
     </div>
   </div>
   <div class="grid fixed overflow-hidden w-50vw h-100vh">
@@ -67,6 +67,9 @@
 
 <script setup lang="ts">
   import Game from "./Game.vue";
+  import { useStore } from "../store/mainStore";
+
+  const store = useStore();
 </script>
 
 <style>

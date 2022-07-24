@@ -35,6 +35,9 @@
 <script setup lang="ts"></script>
 
 <style>
+  html {
+    font-size: 14px;
+  }
   body {
     font-family: "Fira Code", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: theme("colors.primary-2");

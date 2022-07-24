@@ -29,12 +29,19 @@
             submit
           </button>
         </form>
-        <div v-if="!showForm" class="text-center">
+        <div v-if="!showForm && resStatus === 200" class="text-center">
           <div class="text-secondary-4">all good !</div>
           <div>thanks for reaching out</div>
           <div>I'll replay as soon as possible</div>
           <button @click="handleresend" class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1">
             send another?
+          </button>
+        </div>
+        <div v-if="!showForm && resStatus != 200">sending..</div>
+        <div v-if="!showForm && resStatus === 400" class="text-center">
+          <div>hmm something is wrong with your form ..</div>
+          <button @click="handleresend" class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1">
+            try again?
           </button>
         </div>
       </section>
@@ -87,13 +94,29 @@
   const dataEmail = ref("");
   const dataBody = ref("");
   const showForm = ref(true);
+  const resStatus = ref();
 
   const handleresend = () => {
     showForm.value = true;
   };
 
   const submitForm = () => {
+    const data = {
+      subject: dataName.value,
+      message: dataBody.value + " email :" + dataEmail.value,
+    };
     showForm.value = false;
-    window.open(`mailto:creazyhell@gmail.com?subject=$&body=${dataBody.value}`, "_self");
+    fetch("https://shareef-mail.herokuapp.com/api/mail", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => (resStatus.value = response.status))
+
+      .catch((error) => {
+        resStatus.value = error.status;
+      });
   };
 </script>

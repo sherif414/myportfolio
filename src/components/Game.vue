@@ -1,4 +1,11 @@
 <template>
+  <button
+    v-if="!playing"
+    class="bg-lines absolute text-secondary-4 px-2 py-1 rounded-lg bottom-12 left-[20%]"
+    @click="runGame"
+  >
+    start
+  </button>
   <div ref="game" id="game" class="bg-[#011627] rounded-lg"></div>
 </template>
 
@@ -6,6 +13,10 @@
   import Snake from "../game/Snake";
   import Food from "../game/Food";
   import { ref } from "vue";
+  import { useStore } from "../store/mainStore";
+
+  const store = useStore();
+  const playing = ref(false);
   const GAME_SPEED = 5;
   const snakeExpansionRate = 5;
   const GRID = { GRID_ROWS: 37, GRID_COLS: 22 };
@@ -13,29 +24,8 @@
   let lastInputDirection: Point = { x: 0, y: 0 };
   let lastRenderTime = 0;
   const game = ref<HTMLElement>();
-  const snake = new Snake(GRID);
-  const food = new Food(GRID);
-
-  window.addEventListener("keydown", (e) => {
-    switch (e.key) {
-      case "ArrowUp":
-        if (lastInputDirection.y !== 0) break;
-        inputDirection = { x: 0, y: -1 };
-        break;
-      case "ArrowDown":
-        if (lastInputDirection.y !== 0) break;
-        inputDirection = { x: 0, y: 1 };
-        break;
-      case "ArrowLeft":
-        if (lastInputDirection.x !== 0) break;
-        inputDirection = { x: -1, y: 0 };
-        break;
-      case "ArrowRight":
-        if (lastInputDirection.x !== 0) break;
-        inputDirection = { x: 1, y: 0 };
-        break;
-    }
-  });
+  let snake: Snake;
+  let food: Food;
 
   function updateInputDirection(): void {
     lastInputDirection = inputDirection;
@@ -45,9 +35,11 @@
 
   const paint = (currTime: number) => {
     if (snake.checkDeath()) {
-      if (confirm("You lost. Press ok to restart.")) {
-        location.reload();
-      }
+      playing.value = false;
+      let food = null;
+      let snake = null;
+      store.score = 0;
+      if (game.value) game.value.innerHTML = "";
       return;
     }
     requestAnimationFrame(paint);
@@ -58,6 +50,7 @@
     updateInputDirection();
     if (game.value === undefined) return;
     if (snake.consumedFood(food.position)) {
+      store.score++;
       game.value.innerHTML = "";
       snake.update(snakeExpansionRate, lastInputDirection);
       snake.draw(game.value);
@@ -71,8 +64,34 @@
   };
 
   //end of main
+  const runGame = () => {
+    snake = new Snake(GRID);
+    food = new Food(GRID);
+    inputDirection = { x: 0, y: 0 };
+    requestAnimationFrame(paint);
+    playing.value = true;
 
-  requestAnimationFrame(paint);
+    window.addEventListener("keydown", (e) => {
+      switch (e.key) {
+        case "ArrowUp":
+          if (lastInputDirection.y !== 0) break;
+          inputDirection = { x: 0, y: -1 };
+          break;
+        case "ArrowDown":
+          if (lastInputDirection.y !== 0) break;
+          inputDirection = { x: 0, y: 1 };
+          break;
+        case "ArrowLeft":
+          if (lastInputDirection.x !== 0) break;
+          inputDirection = { x: -1, y: 0 };
+          break;
+        case "ArrowRight":
+          if (lastInputDirection.x !== 0) break;
+          inputDirection = { x: 1, y: 0 };
+          break;
+      }
+    });
+  };
 
   type Point = {
     x: number;
